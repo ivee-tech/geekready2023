@@ -1,0 +1,7 @@
+namespace: geekready2023
+oai:
+  repo: zzacr.azurecr.io/geekready2023
+  version: 0.0.1
+  replicas: 2
+  servicePort: 80
+  containerPort: 80

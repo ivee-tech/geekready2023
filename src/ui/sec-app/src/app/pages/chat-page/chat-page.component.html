@@ -1,0 +1,26 @@
+<div>
+    <app-chat [id]="id" [answer]="answer" [loading]="loading" [history]="history"
+        (sendQuestion)="onSendQuestion($event)"></app-chat>
+    <div #panel style="display: none;" class="panel">
+        <mat-card class="mat-mdc-card mdc-card chat-history-card">
+            <mat-card-header>
+                <mat-card-title>
+                    <div #tool></div>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <div #command></div>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div #code></div>
+                <div class="cmd-msg-target">
+                    <input type="text" placeholder="Enter target (image, repo, website, etc.)" [(ngModel)]="targetName" />
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <!-- <mat-divider></mat-divider> -->
+        <div class="cmd-msg-btn">
+            <button type="submit" mat-raised-button color="primary" (click)="sendCommand()">Send</button>
+        </div>
+    </div>
+</div>

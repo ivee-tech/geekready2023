@@ -1,0 +1,630 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/README.md"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/README.md"
+                },
+                "region": {
+                  "startLine": 145,
+                  "startColumn": 15,
+                  "endLine": 145,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/README.md"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/README.md"
+                },
+                "region": {
+                  "startLine": 203,
+                  "startColumn": 15,
+                  "endLine": 203,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/README.md"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/README.md"
+                },
+                "region": {
+                  "startLine": 511,
+                  "startColumn": 13,
+                  "endLine": 511,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/.k8s/helm/script.ps1"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/.k8s/helm/script.ps1"
+                },
+                "region": {
+                  "startLine": 4,
+                  "startColumn": 13,
+                  "endLine": 4,
+                  "endColumn": 29
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/.k8s/helm/script.ps1"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/.k8s/helm/script.ps1"
+                },
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 10,
+                  "endLine": 17,
+                  "endColumn": 16
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "ibrqYGMXCNL19iN8LrtMUVc9tL2VNlZ0hhqliRfdl/U="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0031",
+          "ruleIndex": 1,
+          "rule": {
+            "id": "CSCAN-GENERAL0031"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/api/docker-compose.yml"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/api/docker-compose.yml"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 83,
+                  "endLine": 13,
+                  "endColumn": 119
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "8kUC2PCMEYHksVUd8I1rM3DbykZEUG40cZvc4ne3ZM4="
+          },
+          "suppressions": [],
+          "rank": 70.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.4,
+            "EnrichmentScore": 85.71,
+            "Severity": 70.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "70"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/api/Calculator.Web.Api/script.ps1"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/api/Calculator.Web.Api/script.ps1"
+                },
+                "region": {
+                  "startLine": 28,
+                  "startColumn": 15,
+                  "endLine": 28,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/db/sqlserver-container/docker-compose.yml"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/db/sqlserver-container/docker-compose.yml"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 24,
+                  "endLine": 14,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0060",
+          "ruleIndex": 0,
+          "rule": {
+            "id": "CSCAN-GENERAL0060"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/db/sqlserver-container/script.ps1"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/db/sqlserver-container/script.ps1"
+                },
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 15,
+                  "endLine": 14,
+                  "endColumn": 31
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "/CmAou1gVyn2RpVIuazyyBwqZTjWxri5UZ7VhRYOn0s="
+          },
+          "suppressions": [],
+          "rank": 40.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 71.43,
+            "Severity": 40.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "40"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0020",
+          "ruleIndex": 2,
+          "rule": {
+            "id": "CSCAN-GENERAL0020"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/client.key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/client.key"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "XuIwuFHcSkHvk/GNP+A14goaI2yKjUZ27lx7rJcrlnw="
+          },
+          "suppressions": [],
+          "rank": 100.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 128.57,
+            "Severity": 100.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "100"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0020",
+          "ruleIndex": 2,
+          "rule": {
+            "id": "CSCAN-GENERAL0020"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/oldclient.key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/oldclient.key"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "O6CCOWOkG6XlYuiNootbOLQaWMxd40KR82T3m1G0qts="
+          },
+          "suppressions": [],
+          "rank": 100.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 128.57,
+            "Severity": 100.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "100"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0020",
+          "ruleIndex": 2,
+          "rule": {
+            "id": "CSCAN-GENERAL0020"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/oldserver.key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/oldserver.key"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "oyL7rRj8Y/3GoerUyLwXXtuIEHR2gGMMMWkk2vjcC6A="
+          },
+          "suppressions": [],
+          "rank": 100.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 128.57,
+            "Severity": 100.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "100"
+          }
+        },
+        {
+          "ruleId": "CSCAN-GENERAL0020",
+          "ruleIndex": 2,
+          "rule": {
+            "id": "CSCAN-GENERAL0020"
+          },
+          "level": "error",
+          "message": {
+            "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+          },
+          "analysisTarget": {
+            "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/server.key"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///app/calculator/ui/node_modules/@achrinza/node-ipc/local-node-ipc-certs/private/server.key"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endLine": 1,
+                  "endColumn": 1
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "HashCode": "5baQSLz/b4Egfq+a/K9F8FiVvddH0VEVIeKL90EKRBw="
+          },
+          "suppressions": [],
+          "rank": 100.0,
+          "properties": {
+            "DefectCode": "SecretInFile",
+            "MatchingScore": 99.9,
+            "EnrichmentScore": 128.57,
+            "Severity": 100.0,
+            "Validation": "NoValidationRequested",
+            "Risk": "100"
+          }
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "CredentialScanner",
+          "organization": "Microsoft Corporation",
+          "product": "Microsoft Security Credential Scanner Client",
+          "fullName": "CredentialScanner 2.5.1.13",
+          "version": "2.5.1.13",
+          "semanticVersion": "2.5.1",
+          "rules": [
+            {
+              "id": "CSCAN-GENERAL0060",
+              "name": "General Password",
+              "shortDescription": {
+                "text": "General Password."
+              },
+              "fullDescription": {
+                "text": "like usernames and passwords used in general login process."
+              },
+              "messageStrings": {
+                "Default": {
+                  "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+                }
+              },
+              "helpUri": "https://aka.ms/CredScanDocs"
+            },
+            {
+              "id": "CSCAN-GENERAL0031",
+              "name": "ODBC Connection String",
+              "shortDescription": {
+                "text": "ODBC Connection String."
+              },
+              "fullDescription": {
+                "text": "used in on-prem SQL database login process."
+              },
+              "messageStrings": {
+                "Default": {
+                  "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+                }
+              },
+              "helpUri": "https://aka.ms/CredScanDocs"
+            },
+            {
+              "id": "CSCAN-GENERAL0020",
+              "name": "X.509 Certificate Private Key",
+              "shortDescription": {
+                "text": "X.509 Certificate Private Key."
+              },
+              "fullDescription": {
+                "text": "used as a private component in SSL certificates."
+              },
+              "messageStrings": {
+                "Default": {
+                  "text": "A potential secret was detected. Validate file contains secrets, remove, rotate credential, and use approved store. For additional information on secret remediation see the remediation section at https://aka.ms/CredScanDocs "
+                }
+              },
+              "helpUri": "https://aka.ms/CredScanDocs"
+            }
+          ],
+          "properties": {
+            "Comments": "CredentialScanner is an Azure security tool to scan for credentials & other sensitive data in source code and/or system files."
+          }
+        },
+        "properties": {
+          "IsPreview": true
+        }
+      },
+      "invocations": [
+        {
+          "startTimeUtc": "2023-07-09T01:13:35.913Z",
+          "endTimeUtc": "2023-07-09T01:18:58.847Z",
+          "executionSuccessful": true
+        }
+      ],
+      "columnKind": "utf16CodeUnits"
+    }
+  ]
+}

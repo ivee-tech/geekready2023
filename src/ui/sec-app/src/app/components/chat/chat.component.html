@@ -1,0 +1,41 @@
+<div class="chat-container">
+    <div class="chat-type">
+        <mat-radio-group class="chat-type-radio-group" [(ngModel)]="type">
+            <mat-radio-button class="chat-type-radio-button" *ngFor="let type of types" [value]="type">
+              {{type}}
+            </mat-radio-button>
+          </mat-radio-group>
+    </div>
+    <div class="chat-history">
+        <div *ngFor="let item of history">
+            <div *ngIf="item.question != ''">
+                <mat-card class="mat-mdc-card mdc-card chat-history-card">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <div class="question" [innerHtml]="item.question | code">
+                            </div>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <div class="answer" [innerHTML]="item.answer | code">
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+                <mat-divider></mat-divider>
+            </div>
+        </div>
+    </div>
+    <mat-progress-spinner *ngIf="loading" class="chat-spinner" color="primary" mode="indeterminate"></mat-progress-spinner>
+    <mat-divider></mat-divider>
+    <div class="chat-section">
+        <div class="chat-section-row">
+            <div class="chat-section-col-txt">
+                <textarea placeholder="Enter question" [(ngModel)]="question" rows="2" class="chat-textarea"></textarea>
+            </div>
+            <div class="chat-section-col-btn">
+                <button type="submit" mat-raised-button color="primary" (click)="ask()">Ask</button>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+{{ if .Values.dapr }}
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: pubsub
+  namespace: {{ .Values.namespace }}
+spec:
+  type: pubsub.redis
+  version: v1
+  metadata:
+  - name: redisHost
+    value: {{ .Values.redis.host }}
+  - name: redisPassword
+    secretKeyRef:
+      name: pub-cmd-msg-secret
+      key: redis-password
+ # uncomment below for connecting to redis cache instances over TLS (ex - Azure Redis Cache)
+  # - name: enableTLS
+  #   value: true 
+auth:
+  secretStore: kubernetes
+{{ end }}

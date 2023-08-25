@@ -1,0 +1,21 @@
+{{ if and .Values.dapr .Values.dapr.azureStorage }}
+apiVersion: dapr.io/v1alpha1
+kind: Component
+metadata:
+  name: azure-storage-queue-binding
+  namespace: {{ .Values.namespace }}
+spec:
+  type: bindings.azure.storagequeues
+  version: v1
+  metadata:
+  - name: accountName
+    value: {{ .Values.dapr.azureStorage.accountName }}
+  - name: accountKey
+    secretKeyRef:
+      name: pub-cmd-msg-secret
+      key: azure-storage-account-key
+  - name: queueName
+    value: {{ .Values.dapr.azureStorage.queueName }}
+  - name: encodeBase64
+    value: "true"
+{{ end }}

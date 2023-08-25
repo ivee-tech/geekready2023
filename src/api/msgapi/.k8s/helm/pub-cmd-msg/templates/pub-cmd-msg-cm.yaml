@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pub-cmd-msg-config
+  namespace: {{ .Values.namespace }}
+data:
+  misc: "1"

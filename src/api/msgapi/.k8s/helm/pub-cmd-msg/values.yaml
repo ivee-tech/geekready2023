@@ -1,0 +1,20 @@
+repo: daradu
+namespace: pub-cmd-msg
+api:
+  tag: 0.0.1
+  serviceType: NodePort
+  servicePort: 9090
+  nodePort: 30334
+  connectionString: '***' # set at runtime 
+redis:
+  host: 'redis-master.redis.svc.cluster.local:6379'
+  password: '***' # get the password for redis and set it at runtime
+dapr:
+  useDaprState: false
+  stateStoreUrl: 'http://localhost:3500/v1.0/state/statestore'
+  # pubSubUrl: 'http://localhost:3500/v1.0/publish/pubsub/cmd-msg'
+  pubSubUrl: 'http://localhost:3500/v1.0/bindings/azure-storage-queue-binding'
+  azureStorage:
+    accountName: zzaueadevsasecaas
+    accountKey: '***' # set at runtime
+    queueName: 'scan-commands'

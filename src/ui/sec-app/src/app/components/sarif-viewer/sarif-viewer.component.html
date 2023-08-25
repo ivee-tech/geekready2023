@@ -1,0 +1,72 @@
+<div>
+
+    <div>
+        <h2 *ngIf="this.data && this.data.runs && this.data.runs.length > 0">{{data.runs[0].tool.driver.fullName}}</h2>
+
+        <div>
+            <input type="text" placeholder="Filter" [(ngModel)]="filterText" (input)="onFilterChange($event)" />
+            &nbsp;<span>Found {{ruleCount}} rules</span>
+        </div>
+        <div class="sarif-level-container">
+            <mat-radio-group class="sarif-level-radio-group" [(ngModel)]="level">
+                <mat-radio-button class="sarif-level-radio-button" *ngFor="let lvl of levels" [value]="lvl" (change)="onFilterByLevelChange($event)">
+                  {{lvl}}
+                </mat-radio-button>
+              </mat-radio-group>
+        </div>
+    
+        <div>
+            <div *ngFor="let rule of rules">
+                <mat-card class="mat-mdc-card mdc-card rule-card">
+                    <mat-card-header>
+                        <mat-card-title><a [href]="rule.helpUri" target="_blank"
+                                rel="noopener noreferrer">{{rule.id}}</a></mat-card-title>
+                        <mat-card-subtitle>{{results[rule.id].length}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p>Rule ID: <a [href]="rule.helpUri" target="_blank" rel="noopener noreferrer">{{rule.helpUri}}</a></p>
+                        <p>Name: {{rule.name}}</p>
+                        <p>
+                            Level: {{rule.defaultConfiguration?.level}}
+                            <span [ngSwitch]="rule.defaultConfiguration?.level">
+                                <mat-icon *ngSwitchCase="'note'" class="level-icon">info</mat-icon>
+                                <mat-icon *ngSwitchCase="'error'" class="level-icon error">error</mat-icon>
+                                <mat-icon *ngSwitchCase="'warning'" class="level-icon">warning</mat-icon>
+                            </span>
+                        </p>
+                        <p>{{rule.fullDescription.text}}</p>
+                        <mat-divider></mat-divider>
+                        <mat-expansion-panel class="results-panel" (opened)="rule.showResults = true"
+                                (closed)="rule.showResults = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title>
+                                    Results
+                                </mat-panel-title>
+                                <mat-panel-description>
+                                    Expand the panel to see the results for this rule
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>
+                            <div *ngIf="rule.showResults">
+                                <div *ngFor="let result of results[rule.id]">
+                                    <p class="result-highlight">{{result.ruleId}}</p>
+                                    <div [innerHtml]="result.message.text | code"></div>
+                                    <p><a [href]="result.locations[0].physicalLocation.artifactLocation.uri" target="_blank"
+                                            rel="noopener">{{result.locations[0].physicalLocation.artifactLocation.uri}}</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-card-content>
+                    <mat-card-actions>
+                    </mat-card-actions>
+                    <!-- <mat-card-footer>
+                  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+                </mat-card-footer> -->
+                </mat-card>
+            </div>
+        </div>
+    </div>
+    <!-- <pre>
+    {{data.runs[0].tool.driver.rules | json}}
+    </pre> -->
+</div>

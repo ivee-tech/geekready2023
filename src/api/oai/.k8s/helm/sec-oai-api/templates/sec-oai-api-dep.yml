@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sec-oai-api-dep
+  namespace: {{ .Values.namespace }}
+spec:
+  selector:
+    matchLabels:
+      app: sec-oai-api
+  replicas: {{ .Values.oai.replicas }}
+  template:
+    metadata:
+      labels:
+        app: sec-oai-api
+    spec:
+      containers:
+        - name: sec-oai-api
+          image: {{ .Values.oai.repo }}/sec-oai-api:{{ .Values.oai.version }}
+          ports:
+            - containerPort: {{ .Values.oai.containerPort }}
+              protocol: TCP
+          resources:
+            limits:
+              cpu: 250m
+            requests:
+              cpu: 100m
+          imagePullPolicy: Always

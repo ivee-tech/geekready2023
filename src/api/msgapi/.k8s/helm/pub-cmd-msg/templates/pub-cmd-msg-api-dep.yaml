@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pub-cmd-msg-api-dep
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: pub-cmd-msg
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      tier: pub-cmd-msg-api
+  template:
+    metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/pub-cmd-msg-cm.yaml") . | sha256sum }}    
+{{ if .Values.dapr }}
+        dapr.io/enabled: "true"
+        dapr.io/app-id: "pub-cmd-msg-api"
+        dapr.io/app-port: "80"
+        dapr.io/enable-api-logging: "true"
+{{ end }}
+      labels:
+        tier: pub-cmd-msg-api
+    spec:
+      containers:
+      - name: pub-cmd-msg-api
+        image: {{ .Values.repo }}/pub-cmd-msg-api:{{ .Values.api.tag }}
+        ports:
+        - containerPort: 80
+        env:
+{{ if .Values.dapr }}
+        - name: DAPR_STATESTORE_URL
+          value: {{ .Values.dapr.stateStoreUrl }}
+        - name: USE_DAPR_STATE
+          value: "{{ .Values.dapr.useDaprState }}"
+{{ if .Values.dapr.pubSubUrl }}
+        - name: DAPR_PUBSUB_URL
+          value: {{ .Values.dapr.pubSubUrl }}
+{{ end }}
+{{ end }}
+        imagePullPolicy: Always
+

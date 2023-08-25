@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sec-oai-api-cip
+  labels:
+    run: sec-oai-api-cip
+spec:
+  ports:
+  - port: {{ .Values.oai.servicePort }}
+    targetPort: {{ .Values.oai.containerPort }}
+    protocol: TCP
+  selector:
+    app: sec-oai-api

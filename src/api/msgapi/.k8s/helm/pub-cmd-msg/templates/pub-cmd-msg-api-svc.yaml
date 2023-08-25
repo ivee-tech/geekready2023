@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pub-cmd-msg-api-svc
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: pub-cmd-msg
+spec:
+  selector:
+    tier: pub-cmd-msg-api
+  ports:
+    - protocol: TCP
+{{- if eq .Values.api.serviceType "NodePort" }}
+      nodePort: {{ .Values.api.nodePort }}
+      port: 80
+{{ end }}
+{{- if eq .Values.api.serviceType "LoadBalancer" }}
+      port: {{ .Values.api.servicePort }}
+{{ end }}
+      targetPort: 80
+      name: http
+  type: {{ .Values.api.serviceType }}

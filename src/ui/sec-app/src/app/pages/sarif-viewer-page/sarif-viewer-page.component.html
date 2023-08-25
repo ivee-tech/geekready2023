@@ -1,0 +1,8 @@
+<div>
+    <input mat-raised-button color="primary" class="form-control" type="file" (change)="onChange($event)">
+
+    <button mat-raised-button color="primary" (click)="onUpload()" class="btn btn-success">
+        Upload
+    </button>
+    <app-sarif-viewer [data]="data"></app-sarif-viewer>
+</div>
